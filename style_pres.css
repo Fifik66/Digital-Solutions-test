@@ -108,8 +108,26 @@ line-height: 2;
     height: 380px;
     margin: 100px auto 0 auto;
     text-align: center;
-    background-color: violet;
     overflow: hidden;
+}
+.left{
+    width: 100%;
+    position: relative;
+
+}
+.left::after,.left::before{
+    content: '';
+    width: 10px;
+    height: 1px;
+    position: absolute;
+    background-color: #000;
+    left: 0;
+    top: 0;
+}
+.left::before{
+    transform-origin: left;
+    transform: rotate(90deg);
+    height: 2px;
 }
 
 h1{
@@ -274,16 +292,114 @@ input{
 /* ///////////////////////////////////////// */
 
 .footer{
-width: 100%;
-height: 360px;
-background-color: black;
-margin-top: 120px;
-overflow: hidden;
-display: grid;
-grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    height: 370px;
+    background-color: black;
+    margin-top: 120px;
+    display: flex;
+}
+.block_footer{
+    max-width: 1366px;
+    width: 100%;
+    overflow: hidden;
+    font-family: Montserrat;
+    font-style: normal;
+    display: grid;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    align-content: center;
+    color: #FFFFFF;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.exp_bl{
+    width: 88px;
+    height: 25.5;
+
+
+}
+h4{
+    font-weight: 600;
+}
+p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #DBDBDB;
+    margin: 0;
+
+}
+#cont{
+    margin-top: 42px;
+
 }
 
 .express{
-    color: white;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 60px repeat(4,45px);
+    align-items: center;
+    
+}
 
+.contact{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 70px repeat(3,60px);
+    align-items: center;
+    gap: 7px;
+
+}
+
+.uk{
+    display: grid;
+    grid-template-columns: 40px 130px;
+    grid-template-rows: 22.5px 22.5px;
+    gap: 2px;
+}
+
+.uk_one{
+    grid-column-start: 1;
+}
+
+.uk_two{ 
+    grid-column-start: 2;
+}
+
+.uk_tree{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.address{
+    display: grid;
+    grid-template-rows: repeat(4, 60px);
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.address_two{
+    grid-row-start: 3;
+}
+
+#ad{
+margin-top:68px;
+}
+
+#our{
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.email{
+    display: grid;
+    grid-template-rows: 60px 25px 80px 77px;
+    align-items: center;
+    margin: 0 auto;
+}
+.email,.address,.express,.contact{
+    width: 200px;
 }

@@ -5,8 +5,20 @@ body{
 }
 .container{
     width: 100%;
-    background-color: whitesmoke;
+    background: linear-gradient(180deg, #FFFFFF 0%, #E6EDFA 100%);
+    position: relative;
 }
+#elli_l{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#elli_r{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .bock_haed{
     width: 100%;
     height: 70px;
@@ -129,7 +141,24 @@ line-height: 2;
     transform: rotate(90deg);
     height: 2px;
 }
-
+.right{
+    width: 100%;
+    position: relative;
+}
+.right::after,.right::before{
+    content: '';
+    width: 10px;
+    height: 1px;
+    position: absolute;
+    background-color: #000;
+    right: 0;
+    bottom: 0;
+}
+.right::after{
+    transform-origin: right;
+    transform: rotate(90deg);
+    height: 2px;
+}
 h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;

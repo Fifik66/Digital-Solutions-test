@@ -135,7 +135,8 @@ line-height: 2;
 }
 @media screen and (max-width:900px) and (min-width:700px){
     .bock_haed_dect{
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 3fr 1fr 1fr;
+        overflow: hidden;
     }
     .nav_block{
         position: absolute;
@@ -150,7 +151,7 @@ line-height: 2;
 
     .button_menu{
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 0 35px;
         
 
     }
@@ -209,6 +210,7 @@ line-height: 2;
     margin: 100px auto 0 auto;
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
 .left{
     width: 100%;
@@ -229,24 +231,21 @@ line-height: 2;
     transform: rotate(90deg);
     height: 2px;
 }
-.right{
-    width: 100%;
-    position: relative;
-}
-.right::after,.right::before{
-    content: '';
+.block_center::after,.block_center::before{
     width: 10px;
-    height: 1px;
     position: absolute;
-    background-color: #000;
-    right: 0;
+    content: "";
+    height: 1px;
     bottom: 0;
+    right: 0;
+    background-color: #000;
 }
-.right::after{
+.block_center::after{
     transform-origin: right;
     transform: rotate(90deg);
     height: 2px;
-}
+    }
+
 h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -391,6 +390,32 @@ h2{
         line-height: 72px;
         width: 70%;
     }
+    h2{
+        font-size: 24px;
+        line-height: 29.26px;
+
+    }
+    .line {
+        width: 70%;
+
+    }
+    .line::before {
+        width: 310px;
+    }
+    .line::after {
+        width: 415px
+    }
+    .center{
+        width: 77%;
+        margin: 10px auto;
+    }
+    .consult_div {
+        margin-right: 30px;
+    }
+    .right{
+        height: 54px;
+    }
+    
 }
 
 /* ///////////////////// */
@@ -487,6 +512,24 @@ span{
 
     }
     
+}
+@media screen and (max-width:900px) and (min-width:700px){
+    .form_block{
+        width: 624px;
+        height: 438px;
+    }
+    h3{
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom:25px
+    }
+    #block_form_center{
+        transform: translate(0, 10%);
+
+    }
+    .inputs{
+        width: 240px;
+    }
 }
 
 /* ///////////////////////////////////////// */

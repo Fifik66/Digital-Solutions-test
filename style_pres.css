@@ -373,10 +373,7 @@ h2{
         margin-left: 2px;
         margin-top: -2px;
     }
-    .right {
-
-         height: 23px;
-    }
+   
 }
 
 
@@ -412,9 +409,8 @@ h2{
     .consult_div {
         margin-right: 30px;
     }
-    .right{
-        height: 54px;
-    }
+
+    
     
 }
 
@@ -527,10 +523,20 @@ span{
         transform: translate(0, 10%);
 
     }
+    .form{
+        width: 85%;
+    
+    }
     .inputs{
         width: 240px;
+        padding: 0 0 0 10px;
+    }
+    .big_input{
+        width: 500px;
+        
     }
 }
+    
 
 /* ///////////////////////////////////////// */
 
@@ -670,5 +676,26 @@ margin-top:68px;
     }
     .email{
         gap: 3px;
+    }
+}
+@media screen and (max-width:900px) and (min-width:700px){
+    .block_footer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .address{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .address_two{
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+    .footer{
+        height: 422px;
+    }
+    h4{
+        font-size: 18px;
+        line-height: 22px;
     }
 }

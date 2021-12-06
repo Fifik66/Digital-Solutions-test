@@ -13,8 +13,8 @@
 </head>
 <body>
     <section class="container">
-        <img id="elli_l" src="icon/Ellipse-left.png" alt="">
-        <img id="elli_r" src="icon/Ellipse-right.png" alt="">
+        <img class="elli_l" src="icon/Ellipse-left.png" alt="">
+        <img class="elli_r" src="icon/Ellipse-right.png" alt="">
 
         <nav class="bock_haed_dect">
             <img src="icon/Express.png" alt="Express" class="logo">
@@ -41,7 +41,8 @@
                     </button>
                 </div>
            </nav>
-           <div class="mob_menu">
+           <div class="mob_menu ">
+        
                <ul class="nav_block_mobile">
                 <li class="nav_mob">Home</li>
                 <li class="nav_mob" >About au</li>
@@ -132,7 +133,10 @@
 
     <script>
         document.querySelector('Menu'),addEventListener('click',function(e){
-            
+            document.querySelector('.mob_menu').classList.toggle("mob_menu_active");
+            document.querySelector('.burger').classList.toggle('burger_active');
+            document.querySelector('.elli_l').classList.toggle('elli_l_act')
+            document.querySelector('.elli_r').classList.toggle('elli_r_act')
         })
 
     </script>

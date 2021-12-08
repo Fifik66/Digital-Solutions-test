@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Montserrat sans-serif;
     font-style: normal;
 }
 
@@ -104,7 +104,7 @@ line-height: 2;
     height: 40px;
     top: -3px;
     left: 4px;
-    font-family: 'Montserrat', sans-serif;
+    
     font-weight: 500;
     font-size: 14px;
     border: 1px solid black;
@@ -160,7 +160,7 @@ line-height: 2;
         
 
     }
-    .Menu{
+    .menu{
         width: 100%;
         position: relative;
         border: none;
@@ -260,14 +260,13 @@ line-height: 2;
         padding-left: 70px;
         padding-right: 70px;
         margin-top: 110px;
-        font-family: Montserrat;
-        font-style: normal;
         font-weight: 600;
         font-size: 26px;
         line-height: 32px;
         display: grid;
         grid-template-rows:repeat(4, 55px) ;
         gap: 20px 0;
+        font-family: Montserrat;
     }
     #chev_mobile{
         position: relative;
@@ -303,10 +302,12 @@ line-height: 2;
 
 .bock_haed_dect {
     grid-template-columns: repeat(2,1fr);
+    overflow: hidden;
 }
 .logo{
     width: 70px;
     height: 20px;
+    margin: 0 auto 0 25px;
 }
 .nav_block,.border,.mob_menu {
     display: none;
@@ -314,10 +315,10 @@ line-height: 2;
 }
 .button_menu {
     width: 80%;
-    margin: 0 auto 0 35px;
+    margin: 0 auto 0 75px;
     display: block;
 }
-.Menu {
+.menu {
     width: 100%;
     position: relative;
     border: none;
@@ -330,19 +331,10 @@ line-height: 2;
     height: 3px;
     background-color: #000;
     position: absolute;
-    top: 12px;
-    margin-left: -10px;
+    top: -8px;
+    margin-left: 50px;
 }
-.burger{
-    width: 24px;
-    height: 3px;
-    background-color: #000;
-    position: absolute;
-    top: 12px;
-    margin-left: -10px;
-            
 
-}
 .burger::after,.burger::before{
     position: absolute;        
     content: "";
@@ -364,7 +356,8 @@ line-height: 2;
 
 .burger_active{
     background-color: #ffffff00;
-    margin-left: -10px;
+    top: -8px;
+    margin-left: 50px;
     transform: rotate(90deg);
 
 }
@@ -391,12 +384,7 @@ line-height: 2;
 }
 
 #text_button{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    color: #000;
+    display: none;
 }
 
 .mob_menu{
@@ -410,20 +398,69 @@ line-height: 2;
 }
 .mob_menu_active{
     display: block !important;
+    height: 100vh;
    
 }
 .bock_haed_dect_active{
     background-color: #FFFFFF;
+    overflow: hidden;
 }
 .container_active{
     overflow: hidden;
     height: 100vh;
 }
+.elli_l{
+    position: absolute;
+    top: -130px;
+    left: 0;
+    width: 80%;
+}
 
+.elli_r{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.nav_block_mobile{
+    list-style: none;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    grid-template-rows: repeat(4, 50px);
+    gap: 20px 0;
+    display: grid;
+}
+.nav_mob{
+    border-bottom: 2px solid #DBDBDB;
+    position: relative;
+}
+#chev_mobile::after, #chev_mobile::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 12px;
+    height: 2px;
+    top: 14px;
+}
+#chev_mobile::before {
+    content: '';
+    position: absolute;
+    left: 149px;
+    transform: rotate(-45deg);
+}
+#chev_mobile::after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    left: 141px;
 
-
-
-
+}
 }
 
 
@@ -637,10 +674,55 @@ h2{
     .consult_div {
         margin-right: 30px;
     }
-
-    
+  
     
 }
+@media screen and (max-width:430px) and (min-width:315px){
+    .block_center{
+        width: 80%;
+    }
+    h1{
+        font-size: 32px;
+        line-height: 48px;
+        width:232px
+    }
+    h2{
+        font-size: 20px;
+        line-height: 24px;
+        width: 272px;
+        margin: 20px auto;
+    }
+    .block_center::after, .block_center::before{
+        display: none;
+    }
+    .left{
+        display: none;
+    }
+    .line {
+        width: 80%;
+    }
+    .line::before {
+        width: 195px;
+        left: 10px
+        
+    }
+    .line::after {
+        width: 272px;
+    }
+    .center{
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: 1fr;  
+        gap: 10px 0;
+        width: 100%;
+    }
+}
+@media screen and (max-width:321px){
+
+    .block_center{
+        width: 100%;
+    }
+}
+
 
 /* ///////////////////// */
 
@@ -764,44 +846,38 @@ span{
         
     }
 }
-
 @media screen and (max-width:430px) and (min-width:315px){
-    .block_center{
-        width: 80%;
-    }
-    h1{
-        font-size: 32px;
-        line-height: 48px;
-        width:232px
-    }
-    h2{
-        font-size: 20px;
-        line-height: 24px;
-        width: 272px;
-        margin: 20px auto;
-    }
-    .block_center::after, .block_center::before{
-        display: none;
-    }
-    .left{
-        display: none;
-    }
-    .line {
-        width: 80%;
-    }
-    .line::before {
-        width: 195px;
-        left: 10px
-        
-    }
-    .line::after {
-        width: 272px;
-    }
-    .center{
-        grid-template-rows: repeat(2,1fr);
-        grid-template-columns: 1fr;  
-        gap: 10px 0;
-    }
+
+ .form_block{
+     width: 90%;
+     margin: 100px auto 0 auto;
+
+}
+h3{
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+#block_form_center{
+    transform: translate(0, 3%);
+}
+.form{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,50px);
+    width: 100%;
+    gap: 16px;margin: 10px auto 16px auto;
+
+}
+
+.inputs, .big_input,.Send_div{
+    width: 80%;
+}
+.Send_butt{
+    width: 100%;
+
+}
+
+
 }
 
     
@@ -833,7 +909,7 @@ span{
 
 .exp_bl{
     width: 88px;
-    height: 25.5;
+    height: 25.5px;
 
 
 }
@@ -971,4 +1047,37 @@ margin-top:68px;
         display: block;
         margin: 0 0 auto auto;
     }
+}
+@media screen and (max-width:430px) and (min-width:315px){
+
+    .footer{
+        height: auto;
+
+    }
+    .block_footer{
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(3,1fr);
+        text-align: left;
+        margin-top: 10px;
+    }
+    .email, .address, .express, .contact {
+        margin: 0 auto 0 20px;
+    }
+
+    .email{
+        grid-template-rows: 60px 25px 40px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    h4 {
+        font-size: 16px;
+        line-height: 20px;  
+    }
+    .email, .address, .express, .contact{
+        width: 280px;
+    }
+
+
 }

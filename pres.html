@@ -41,16 +41,28 @@
                     </button>
                 </div>
            </nav>
-           <div class="mob_menu ">
+
+           <div class="mob_menu">
         
                <ul class="nav_block_mobile">
                 <li class="nav_mob">Home</li>
                 <li class="nav_mob" >About us</li>
-                <li class="nav_mob" id="chev_mobile">Our services</li>
+                <li class="nav_mob chev_mobile">Our services
+                    <div class="mobile_menu_close">
+                        <ul class="ul_mobile">
+                            <li class="open_menu_mob">Lorem ipsum</li>
+                            <li class="open_menu_mob">Lorem ipsum</li>
+                            <li class="open_menu_mob">Lorem ipsum</li>
+                            <li class="open_menu_mob">Lorem ipsum</li>
+                            <li class="open_menu_mob">Lorem ipsum</li>
+                            <li class="open_menu_mob">Lorem ipsum</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="nav_mob">Contact us</li>
                </ul>
             </div>
-
+<!-- ///////////////////////////////////////// -->
            <div class="block_center">
                <div class="left"></div>
                <h1>Lorem ipsum set
@@ -65,7 +77,7 @@
                 </div>
               
            </div>
-
+<!-- ////////////////////////////////////////// -->
            <div class="form_block">
                <div id="block_form_center" >
                <h3>Contact <span>Us</span> </h3>
@@ -82,7 +94,7 @@
             </div>
             </div>
         </div>
-
+<!-- ///////////////////////////////////////////// -->
             <div class="footer">
                 <div class="block_footer">
                     <div class="express">
@@ -132,13 +144,20 @@
     </section>
 
     <script>
-        document.querySelector('menu'),addEventListener('click',function(e){
+        document.querySelector('.menu').addEventListener('click',function(e){
             document.querySelector('.mob_menu').classList.toggle("mob_menu_active");
             document.querySelector('.burger').classList.toggle('burger_active');
-            document.querySelector('.elli_l').classList.toggle('elli_l_act')
-            document.querySelector('.elli_r').classList.toggle('elli_r_act')
-            document.querySelector('.bock_haed_dect').classList.toggle('bock_haed_dect_active')
-            document.querySelector('.container').classList.toggle('container_active')
+            document.querySelector('.elli_l').classList.toggle('elli_l_act');
+            document.querySelector('.elli_r').classList.toggle('elli_r_act');
+            document.querySelector('.bock_haed_dect').classList.toggle('bock_haed_dect_active');
+            document.querySelector('.container').classList.toggle('container_active');
+        })
+
+
+        document.querySelector(".chev_mobile").addEventListener("click",function(r){
+            document.querySelector('.mobile_menu_close').classList.toggle("mobile_menu_close_active");
+            document.querySelector('.chev_mobile').classList.toggle("chev_mobile_active");
+            document.querySelector('.nav_block_mobile').classList.toggle("nav_block_mobile_active");
         })
     </script>
     

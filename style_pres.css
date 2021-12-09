@@ -126,6 +126,8 @@ line-height: 2;
     display: none;
 }
 
+
+/* ///////////////////not/////////////////// */
 @media screen and (max-width:1366px) and (min-width:1000px) {
     .logo {
         width: 90px;
@@ -140,6 +142,11 @@ line-height: 2;
         left: 2px;
     }
 }
+
+
+/* /////////////////////Tablet////////////////// */
+
+
 @media screen and (max-width:900px) and (min-width:700px){
     .bock_haed_dect{
         grid-template-columns: 3fr 1fr 1fr;
@@ -356,7 +363,7 @@ line-height: 2;
     }
 }
 
-/* ///////////////////////////////////////// */
+/* //////////////////Mobile/////////////////////// */
 
 
 
@@ -583,7 +590,7 @@ display: none;
 
 
 
-/* ///////////////////////////////////////////////// */
+/* ///////////////////center////////////////////////////// */
 
 .block_center{
     width: 884px;
@@ -710,6 +717,10 @@ h2{
     margin-top: -4px;
 
 }
+
+/* ///////////////////note////////////// */
+
+
 @media screen and (max-width:1366px) and (min-width:1000px) {
 
     .block_center{
@@ -757,6 +768,7 @@ h2{
    
 }
 
+/* ////////////tablet////////////// */
 
 @media screen and (max-width:900px) and (min-width:700px){
 
@@ -793,6 +805,12 @@ h2{
   
     
 }
+
+
+
+/* /////////////////mobile/////////////// */
+
+
 @media screen and (max-width:430px) and (min-width:315px){
     .block_center{
         width: 80%;
@@ -840,7 +858,7 @@ h2{
 }
 
 
-/* ///////////////////// */
+/* ////////////////Form/////////////// */
 
 .form_block{
     width: 80%;
@@ -921,6 +939,8 @@ span{
     margin-top: -4px;
 
 }
+/* ///////////////////note////////////// */
+
 
 @media screen and (max-width:1366px) and (min-width:1000px) {
     h3 {
@@ -935,6 +955,8 @@ span{
     }
     
 }
+
+/* ////////////tablet////////////// */
 @media screen and (max-width:900px) and (min-width:700px){
     .form_block{
         width: 624px;
@@ -962,6 +984,10 @@ span{
         
     }
 }
+
+/* /////////////////mobile/////////////// */
+
+
 @media screen and (max-width:430px) and (min-width:315px){
 
  .form_block{
@@ -998,7 +1024,7 @@ h3{
 
     
 
-/* ///////////////////////////////////////// */
+/* ////////////////Footer///////////////////////// */
 
 .footer{
     width: 100%;
@@ -1117,6 +1143,10 @@ margin-top:68px;
     width: 200px;
 
 }
+
+
+/* ///////////////////Note////////////////// */
+
 @media screen and (max-width:1366px) and (min-width:1000px) {
 
     .block_footer {
@@ -1136,6 +1166,10 @@ margin-top:68px;
         gap: 3px;
     }
 }
+
+
+/* ///////////////tablet///////////////// */
+
 @media screen and (max-width:900px) and (min-width:700px){
     .block_footer{
         grid-template-columns: repeat(2, 1fr);
@@ -1164,6 +1198,10 @@ margin-top:68px;
         margin: 0 0 auto auto;
     }
 }
+
+
+/* /////////////////mobile/////////////////// */
+
 @media screen and (max-width:430px) and (min-width:315px){
 
     .footer{

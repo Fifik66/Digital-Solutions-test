@@ -21,21 +21,16 @@
             <ul class="nav_block">
                 <li class="nav">Home</li>
                 <li class="nav" >About us</li>
-                <li class="nav" id="chev">Our services
-                    <ul class="ret">
-                        <li class="lor_menu">Lorem ipsum</li>
-                        <li class="lor_menu">Lorem ipsum</li>
-                        <li class="lor_menu">Lorem ipsum</li>
-                        <li class="lor_menu">Lorem ipsum</li>
-                    </ul>
-                </li>
-                <li class="nav">Contact us</li>     
+               <button class="head_button">
+                    <li class="nav" id="chev">Our services</li>
+                </button>
+               <a href="#email"> <li class="nav">Contact us</li></a>     
             </ul>
                 <div class="border">
                     <button class="call_butt" >Call us</button>
                 </div>
 <!-- ////////////////////////////////////// MOBILE BLOCK //////////// -->
-                <div class="button_menu">
+                <div class="button_menu_mobile">
                     <button class="menu" >
                         <div class='burger' ></div>
                         <p id="text_button">Menu</p>
@@ -43,6 +38,16 @@
                 </div>
            </nav>
 
+           <!-- ////////////////////////// -->
+           <div class="menu_open">
+            <ul class="ret">
+                <li class="lor_menu"> <a href="">Lorem ipsum</a></li>
+                <li class="lor_menu"><a href="">Lorem ipsum</a></li>
+                <li class="lor_menu"><a href="">Lorem ipsum</a></li>
+                <li class="lor_menu"><a href="">Lorem ipsum</a></li>
+            </ul>
+        </div>
+        <!-- ////////////////////////// -->
            <div class="mob_menu">
         
                <ul class="nav_block_mobile">
@@ -51,12 +56,12 @@
                 <li class="nav_mob chev_mobile">Our services
                     <div class="mobile_menu_close">
                         <ul class="ul_mobile">
-                            <li class="open_menu_mob">Lorem ipsum</li>
-                            <li class="open_menu_mob">Lorem ipsum</li>
-                            <li class="open_menu_mob">Lorem ipsum</li>
-                            <li class="open_menu_mob">Lorem ipsum</li>
-                            <li class="open_menu_mob">Lorem ipsum</li>
-                            <li class="open_menu_mob">Lorem ipsum</li>
+                            <li class="open_menu_mob"><a href="">Lorem ipsum</a></li>
+                            <li class="open_menu_mob"><a href="">Lorem ipsum</a></li>
+                            <li class="open_menu_mob"><a href="">Lorem ipsum</a></li>
+                            <li class="open_menu_mob"><a href="">Lorem ipsum</a></li>
+                            <li class="open_menu_mob"><a href="">Lorem ipsum</a></li>
+                            <li class="open_menu_mob"><a href="">Lorem ipsum</a></li>
                         </ul>
                     </div>
                 </li>
@@ -151,13 +156,20 @@
     </section>
 
     <script>
+        document.querySelector('.head_button').addEventListener('click',function(q){
+            document.querySelector('.menu_open').classList.toggle("menu_active_open")
+        })
+
+
         document.querySelector('.menu').addEventListener('click',function(e){
             document.querySelector('.mob_menu').classList.toggle("mob_menu_active");
             document.querySelector('.burger').classList.toggle('burger_active');
             document.querySelector('.elli_l').classList.toggle('elli_l_act');
             document.querySelector('.elli_r').classList.toggle('elli_r_act');
             document.querySelector('.bock_haed_dect').classList.toggle('bock_haed_dect_active');
-            document.querySelector('.container').classList.toggle('container_active');
+            document.querySelector('.block_center').classList.toggle('container_active');
+            document.querySelector('.footer').classList.toggle('container_active');
+            document.querySelector('.form_block').classList.toggle('container_active');
         })
 
 
